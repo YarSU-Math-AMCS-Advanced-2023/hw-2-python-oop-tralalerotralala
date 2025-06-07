@@ -11,7 +11,7 @@ class UserManager(Manager):
         self.users = self._load(self.users_file)
 
     def save(self):
-        with open(self.ads_file, 'w') as f:
+        with open(self.users_file, 'w') as f:
             json.dump(self.users, f, indent=4)
 
     def _load(self, filename: str):

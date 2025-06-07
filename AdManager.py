@@ -52,7 +52,7 @@ class AdManager(Manager):
             self.ads[ad_id]['popularity'] += 1
             self.save_ads()
 
-    def get_user_ads(current_user: str, self) -> List[Dict]:
+    def get_user_ads(self, current_user: str) -> List[Dict]:
         return [ad for ad in self.ads.values() if ad['owner'] == current_user]
 
     def get_all_ads(self) -> List[Dict]:
