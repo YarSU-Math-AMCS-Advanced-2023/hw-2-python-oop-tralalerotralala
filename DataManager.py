@@ -1,7 +1,7 @@
-import json
-import os
+from Manager import Manager
+from UserManager import UserManager
+from AdManager import AdManager
 from typing import List, Dict
-from datetime import datetime
 
 
 class DataManager:
@@ -14,74 +14,51 @@ class DataManager:
         return cls._instance
 
     def _initialize(self):
-        self.users_file = "users.json"
-        self.ads_file = "ads.json"
-        self.current_user = None
-        self.users = self._load_data(self.users_file)
-        self.ads = self._load_data(self.ads_file)
+        self.__user_manager = UserManager()
+        self.__ad_manager = AdManager()
 
-    def _load_data(self, filename: str) -> Dict:
-        if os.path.exists(filename):
-            with open(filename, 'r') as f:
-                try:
-                    return json.load(f)
-                except json.JSONDecodeError:
-                    return {}
-        return {}
+    @property
+    def users(self) -> List:
+        return self.__user_manager.users
 
-    def save_users(self):
-        with open(self.users_file, 'w') as f:
-            json.dump(self.users, f, indent=4)
+    @property
+    def current_user(self) -> str:
+        return self.__user_manager.current_user
 
-    def save_ads(self):
-        with open(self.ads_file, 'w') as f:
-            json.dump(self.ads, f, indent=4)
+    @current_user.setter
+    def current_user(self, val: str | None):
+        self.__user_manager.current_user = val
 
-    def register_user(self, user_data: Dict) -> bool:
-        if user_data['login'] in self.users:
-            return False
-        self.users[user_data['login']] = user_data
-        self.save_users()
-        return True
-
-    def authenticate_user(self, login: str, password: str) -> bool:
-        if login in self.users and self.users[login]['password'] == password:
-            self.current_user = login
-            return True
-        return False
+    @property
+    def ads(self) -> List:
+        return self.__ad_manager.ads
 
     def add_ad(self, ad_data: Dict):
-        if not self.ads:
-            ad_id = "1"
-        else:
-            max_id = max(int(k) for k in self.ads.keys())
-            ad_id = str(max_id + 1)
-
-        ad_data['id'] = ad_id
-        ad_data['owner'] = self.current_user
-        ad_data['popularity'] = 0
-        ad_data['date'] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        self.ads[ad_id] = ad_data
-        self.save_ads()
-
-    def update_ad(self, ad_id: str, ad_data: Dict):
-        if ad_id in self.ads:
-            self.ads[ad_id].update(ad_data)
-            self.save_ads()
-
-    def delete_ad(self, ad_id: str):
-        if ad_id in self.ads:
-            del self.ads[ad_id]
-            self.save_ads()
-
-    def increment_popularity(self, ad_id: str):
-        if ad_id in self.ads:
-            self.ads[ad_id]['popularity'] += 1
-            self.save_ads()
+        self.__ad_manager.add_ad(self.current_user)
 
     def get_user_ads(self) -> List[Dict]:
-        return [ad for ad in self.ads.values() if
-                ad['owner'] == self.current_user]
+        return self.__ad_manager.get_user_ads(self.current_user)
+
+    def register_user(self, user_data: Dict) -> bool:
+        return self.__user_manager.register_user(user_data)
+
+    def authenticate_user(self, login: str, password: str) -> bool:
+        return self.__user_manager.authenticate_user(login, password)
+
+    def add_ad(self, current_user: str, ad_data: Dict):
+        self.__ad_manager.add_ad(self.current_user, ad_data)
+
+    def update_ad(self, ad_id: str, ad_data: Dict):
+        self.__ad_manager.update_ad(ad_id, ad_data)
+
+    def delete_ad(self, ad_id: str):
+        self.__ad_manager.delete_ad(ad_id)
+
+    def increment_popularity(self, ad_id: str):
+        self.__ad_manager.increment_popularity(ad_id)
+
+    def get_user_ads(self) -> List[Dict]:
+        return self.__ad_manager.get_user_ads(self.current_user)
 
     def get_all_ads(self) -> List[Dict]:
-        return list(self.ads.values())
+        return self.__ad_manager.get_all_ads()
