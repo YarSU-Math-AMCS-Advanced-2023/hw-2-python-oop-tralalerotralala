@@ -1,0 +1,152 @@
+{
+    "1": {
+        "name": "Table",
+        "description": "Beautiful green wood table",
+        "cost": "8761.00",
+        "category": "Furniture",
+        "id": "1",
+        "owner": "t",
+        "popularity": 2,
+        "date": "2025-06-03 18:00:15"
+    },
+    "2": {
+        "name": "tortoise",
+        "description": "small sea tortoise",
+        "cost": "656.00",
+        "category": "Other",
+        "id": "2",
+        "owner": "t",
+        "popularity": 2,
+        "date": "2025-06-03 18:36:59"
+    },
+    "3": {
+        "name": "Hat",
+        "description": "Black top hat",
+        "cost": "187.00",
+        "category": "Clothing",
+        "id": "3",
+        "owner": "t",
+        "popularity": 1,
+        "date": "2025-06-03 18:38:06"
+    },
+    "4": {
+        "name": "Boxers",
+        "description": "Calvin Klein red boxers",
+        "cost": "478.00",
+        "category": "Clothing",
+        "id": "4",
+        "owner": "AHTOXA_AHIGILATOR2006",
+        "popularity": 0,
+        "date": "2025-06-03 18:41:28"
+    },
+    "5": {
+        "name": "bicycle",
+        "description": "Green bicycle from Balakirevo",
+        "cost": "1092.00",
+        "category": "Vehicles",
+        "id": "5",
+        "owner": "AHTOXA_AHIGILATOR2006",
+        "popularity": 0,
+        "date": "2025-06-03 18:42:56"
+    },
+    "6": {
+        "name": "Tablet",
+        "description": "Huawei tablet with a stylus. It is well suited for drawing ",
+        "cost": "9872.00",
+        "category": "Electronics",
+        "id": "6",
+        "owner": "AHTOXA_AHIGILATOR2006",
+        "popularity": 0,
+        "date": "2025-06-03 18:49:17"
+    },
+    "7": {
+        "name": "Easter egg",
+        "description": "A delicous colored egg",
+        "cost": "56.00",
+        "category": "Other",
+        "id": "7",
+        "owner": "polarBear1337",
+        "popularity": 1,
+        "date": "2025-06-03 19:21:01"
+    },
+    "8": {
+        "name": "Faberge egg",
+        "description": "Gold beautiful egg",
+        "cost": "3872.00",
+        "category": "Furniture",
+        "id": "8",
+        "owner": "polarBear1337",
+        "popularity": 1,
+        "date": "2025-06-03 19:21:55"
+    },
+    "9": {
+        "name": "T-shirt",
+        "description": "White t-shirt. Size: XXL",
+        "cost": "239.00",
+        "category": "Clothing",
+        "id": "9",
+        "owner": "polarBear1337",
+        "popularity": 1,
+        "date": "2025-06-03 19:26:39"
+    },
+    "10": {
+        "name": "Sofa",
+        "description": "Comfortable corner sofa",
+        "cost": "1678.00",
+        "category": "Furniture",
+        "id": "10",
+        "owner": "stayer_anna",
+        "popularity": 0,
+        "date": "2025-06-03 19:39:37"
+    },
+    "11": {
+        "name": "laptop",
+        "description": "Macbook Pro",
+        "cost": "4567.00",
+        "category": "Electronics",
+        "id": "11",
+        "owner": "stayer_anna",
+        "popularity": 0,
+        "date": "2025-06-03 19:40:21"
+    },
+    "12": {
+        "name": "Headphones",
+        "description": "Apple Airpods",
+        "cost": "789.00",
+        "category": "Electronics",
+        "id": "12",
+        "owner": "stayer_anna",
+        "popularity": 0,
+        "date": "2025-06-03 19:41:16"
+    },
+    "13": {
+        "name": "helicopter",
+        "description": "Military helicopter with two machine guns",
+        "cost": "99907654.00",
+        "category": "Vehicles",
+        "id": "13",
+        "owner": "darkus-_-",
+        "popularity": 0,
+        "date": "2025-06-03 19:48:40"
+    },
+    "14": {
+        "name": "Bottle",
+        "description": "Empty glass bottle",
+        "cost": "13.00",
+        "category": "Other",
+        "id": "14",
+        "owner": "darkus-_-",
+        "popularity": 0,
+        "date": "2025-06-03 20:22:13"
+    },
+    "15": {
+        "name": "book",
+        "description": "Fundamentals of differential equations",
+        "cost": "368.00",
+        "category": "Other",
+        "id": "15",
+        "owner": "darkus-_-",
+        "popularity": 0,
+        "date": "2025-06-03 20:23:48"
+    }
+}
