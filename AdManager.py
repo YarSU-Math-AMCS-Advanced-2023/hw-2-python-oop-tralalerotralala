@@ -1,16 +1,20 @@
+import os
+import json
+from datetime import datetime
 from Manager import Manager
+from typing import List, Dict
 
 
 class AdManager(Manager):
     def __init__(self):
         self.ads_file = "ads.json"
-        self.ads = self._load_data(self.ads_file)
+        self.ads = self._load(self.ads_file)
 
     def save(self):
         with open(self.ads_file, 'w') as f:
             json.dump(self.ads, f, indent=4)
 
-    def _load(self):
+    def _load(self, filename: str):
         if os.path.exists(self.ads_file):
             with open(self.ads_file, 'r') as f:
                 try:

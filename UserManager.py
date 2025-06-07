@@ -1,18 +1,21 @@
+import os
+import json
 from Manager import Manager
+from typing import Dict
 
 
 class UserManager(Manager):
     def __init__(self):
         self.users_file = "users.json"
         self.current_user = None
-        self.users = self._load_data(self.users_file)
+        self.users = self._load(self.users_file)
 
     def save(self):
         with open(self.ads_file, 'w') as f:
             json.dump(self.users, f, indent=4)
 
-    def _load(self):
-        if os.path.exists(self.ads_file):
+    def _load(self, filename: str):
+        if os.path.exists(self.users_file):
             with open(self.users_file, 'r') as f:
                 try:
                     return json.load(f)
