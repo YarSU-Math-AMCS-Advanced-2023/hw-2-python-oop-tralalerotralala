@@ -1,0 +1,68 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.9 Chrome/134.0.6998.205 Electron/35.4.0 Safari/537.36" version="27.0.9">
+  <diagram name="Страница — 1" id="AlY2I4675OkccdJYt1hE">
+    <mxGraphModel dx="1042" dy="634" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="TBcYvoKrp88RKR1vTkP3-1" value="MainWindow" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="40" width="190" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="TBcYvoKrp88RKR1vTkP3-2" value="+ data_manger: DataManager&lt;div&gt;+ sort_context: SortContext&lt;/div&gt;&lt;div&gt;+ sort_ascending: bool&lt;/div&gt;&lt;div&gt;+ current_displayed_ads: list&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="TBcYvoKrp88RKR1vTkP3-1">
+          <mxGeometry y="26" width="190" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="TBcYvoKrp88RKR1vTkP3-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="TBcYvoKrp88RKR1vTkP3-1">
+          <mxGeometry y="100" width="190" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="TBcYvoKrp88RKR1vTkP3-4" value="+ setup_ui(): void&lt;div&gt;+ show_main(): void&lt;/div&gt;&lt;div&gt;+ show_login_dialog(): void&lt;/div&gt;&lt;div&gt;+ show_register_dialog(): void&lt;/div&gt;&lt;div&gt;+ show_create_ad_dialog(): void&lt;/div&gt;&lt;div&gt;+ show_edit_ad_dialog(): void&lt;/div&gt;&lt;div&gt;+ apply_filters(dict): void&lt;/div&gt;&lt;div&gt;+ toggle_sort_direction(): void&lt;/div&gt;&lt;div&gt;+ update_sort_strategy(): void&lt;/div&gt;&lt;div&gt;+ apply_current_sort(): void&lt;/div&gt;&lt;div&gt;+ display_ads(list): void&lt;/div&gt;&lt;div&gt;+ logout(): void&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="TBcYvoKrp88RKR1vTkP3-1">
+          <mxGeometry y="108" width="190" height="182" as="geometry" />
+        </mxCell>
+        <mxCell id="TBcYvoKrp88RKR1vTkP3-5" value="DataManager" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="340" width="210" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="TBcYvoKrp88RKR1vTkP3-6" value="- instance: DataManager&lt;div&gt;- user_manager: UserManager&lt;/div&gt;&lt;div&gt;- ad_manager: AdManager&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="TBcYvoKrp88RKR1vTkP3-5">
+          <mxGeometry y="26" width="210" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="TBcYvoKrp88RKR1vTkP3-7" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="TBcYvoKrp88RKR1vTkP3-5">
+          <mxGeometry y="80" width="210" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="TBcYvoKrp88RKR1vTkP3-8" value="# load(str): void&lt;div&gt;+ save(): void&lt;/div&gt;&lt;div&gt;+ users(): list&lt;/div&gt;&lt;div&gt;+ ads(): list&lt;/div&gt;&lt;div&gt;+ current_user(): str&lt;br&gt;&lt;div&gt;+ add_ad(str, dict): void&lt;/div&gt;&lt;div&gt;+ update_ad(str, dict): void&amp;nbsp;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;+ delete_ad(str)&lt;/div&gt;&lt;div&gt;+ increment_popularity(str): void&lt;/div&gt;&lt;div&gt;+ get_user_ads(str): list&lt;/div&gt;&lt;div&gt;+ get_all_ads(): list&lt;/div&gt;&lt;div&gt;&lt;div&gt;+ register_user(dict): bool&lt;/div&gt;&lt;div&gt;+ authenticate_user(str, str): bool&lt;/div&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="TBcYvoKrp88RKR1vTkP3-5">
+          <mxGeometry y="88" width="210" height="202" as="geometry" />
+        </mxCell>
+        <mxCell id="TBcYvoKrp88RKR1vTkP3-9" value="SortContext" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="475" width="222" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="TBcYvoKrp88RKR1vTkP3-10" value="- strategy: SortStrategy" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="TBcYvoKrp88RKR1vTkP3-9">
+          <mxGeometry y="26" width="222" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="TBcYvoKrp88RKR1vTkP3-11" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="TBcYvoKrp88RKR1vTkP3-9">
+          <mxGeometry y="52" width="222" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="TBcYvoKrp88RKR1vTkP3-12" value="+ set_strategy(SortStrategy): void&lt;div&gt;+ sort_ads(list): list&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="TBcYvoKrp88RKR1vTkP3-9">
+          <mxGeometry y="60" width="222" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="TBcYvoKrp88RKR1vTkP3-13" value="" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;entryX=0.99;entryY=0.309;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="TBcYvoKrp88RKR1vTkP3-8">
+          <mxGeometry x="-1" y="3" relative="1" as="geometry">
+            <mxPoint x="500" y="330" as="sourcePoint" />
+            <mxPoint x="175" y="340" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="500" y="331" />
+              <mxPoint x="500" y="370" />
+              <mxPoint x="360" y="370" />
+              <mxPoint x="360" y="490" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TBcYvoKrp88RKR1vTkP3-14" value="" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;exitX=0.583;exitY=1.007;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="TBcYvoKrp88RKR1vTkP3-4" target="TBcYvoKrp88RKR1vTkP3-9">
+          <mxGeometry x="-1" y="3" relative="1" as="geometry">
+            <mxPoint x="330" y="330" as="sourcePoint" />
+            <mxPoint x="490" y="330" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="550" y="360" />
+              <mxPoint x="551" y="360" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
