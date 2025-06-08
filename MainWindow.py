@@ -1,4 +1,5 @@
 from datetime import datetime
+from typing import List, Dict
 from PyQt5.QtWidgets import (QWidget, QStackedWidget, QVBoxLayout, QHBoxLayout,
                              QMainWindow, QPushButton, QListWidget, QComboBox,
                              QDialog, QMessageBox, QListWidgetItem, QLabel)
@@ -34,7 +35,6 @@ class MainWindow(QMainWindow):
         self.central_widget = QStackedWidget()
         self.setCentralWidget(self.central_widget)
 
-        # Login Screen
         self.login_screen = QWidget()
         login_layout = QVBoxLayout()
 
@@ -163,7 +163,7 @@ class MainWindow(QMainWindow):
         if dialog.exec_() == QDialog.Accepted:
             self.update_ads_list()
 
-    def show_edit_ad_dialog(self, ad_data):
+    def show_edit_ad_dialog(self, ad_data: Dict):
         dialog = EditAdDialog(ad_data, self)
         if dialog.exec_() == QDialog.Accepted:
             self.update_ads_list()
@@ -194,7 +194,7 @@ class MainWindow(QMainWindow):
             self.current_filters['owner_login'] = ''
         self.update_ads_list()
 
-    def apply_filters(self, filters):
+    def apply_filters(self, filters: Dict):
         if self.my_ads_btn.isChecked():
             base_ads = self.data_manager.get_user_ads()
         else:
@@ -266,7 +266,7 @@ class MainWindow(QMainWindow):
         sorted_ads = self.sort_context.sort_ads(self.current_displayed_ads)
         self.display_sorted_ads(sorted_ads)
 
-    def display_sorted_ads(self, sorted_ads):
+    def display_sorted_ads(self, sorted_ads: List):
         self.ads_list.clear()
         try:
             for ad in sorted_ads:
@@ -334,7 +334,7 @@ class MainWindow(QMainWindow):
         else:
             details.exec_()
 
-    def delete_ad(self, ad_id):
+    def delete_ad(self, ad_id: str):
         reply = QMessageBox.question(
             self, 'Delete Ad', 'Are you sure you want to delete this ad?',
             QMessageBox.Yes | QMessageBox.No, QMessageBox.No
@@ -344,7 +344,7 @@ class MainWindow(QMainWindow):
             self.data_manager.delete_ad(ad_id)
             self.update_ads_list()
 
-    def display_ads(self, ads):
+    def display_ads(self, ads: List):
         self.ads_list.clear()
         self.current_displayed_ads = ads.copy()
 

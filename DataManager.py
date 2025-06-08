@@ -33,9 +33,6 @@ class DataManager:
     def ads(self) -> List:
         return self.__ad_manager.ads
 
-    def add_ad(self, ad_data: Dict):
-        self.__ad_manager.add_ad(self.current_user)
-
     def get_user_ads(self) -> List[Dict]:
         return self.__ad_manager.get_user_ads(self.current_user)
 
@@ -45,7 +42,7 @@ class DataManager:
     def authenticate_user(self, login: str, password: str) -> bool:
         return self.__user_manager.authenticate_user(login, password)
 
-    def add_ad(self, current_user: str, ad_data: Dict):
+    def add_ad(self, ad_data: Dict):
         self.__ad_manager.add_ad(self.current_user, ad_data)
 
     def update_ad(self, ad_id: str, ad_data: Dict):
