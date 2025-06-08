@@ -40,17 +40,17 @@ class AdManager(Manager):
     def update_ad(self, ad_id: str, ad_data: Dict):
         if ad_id in self.ads:
             self.ads[ad_id].update(ad_data)
-            self.save_ads()
+            self.save()
 
     def delete_ad(self, ad_id: str):
         if ad_id in self.ads:
             del self.ads[ad_id]
-            self.save_ads()
+            self.save()
 
     def increment_popularity(self, ad_id: str):
         if ad_id in self.ads:
             self.ads[ad_id]['popularity'] += 1
-            self.save_ads()
+            self.save()
 
     def get_user_ads(self, current_user: str) -> List[Dict]:
         return [ad for ad in self.ads.values() if ad['owner'] == current_user]
