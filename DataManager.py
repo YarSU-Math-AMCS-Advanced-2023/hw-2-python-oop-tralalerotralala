@@ -5,13 +5,13 @@ from typing import List, Dict
 
 
 class DataManager:
-    _instance = None
+    __instance = None
 
     def __new__(cls):
-        if cls._instance is None:
-            cls._instance = super().__new__(cls)
-            cls._instance._initialize()
-        return cls._instance
+        if cls.__instance is None:
+            cls.__instance = super().__new__(cls)
+            cls.__instance._initialize()
+        return cls.__instance
 
     def _initialize(self):
         self.__user_manager = UserManager()
