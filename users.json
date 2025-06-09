@@ -1,0 +1,42 @@
+{
+    "AHTOXA_AHIGILATOR2006": {
+        "first_name": "Anton",
+        "last_name": "Kruglyshev",
+        "birth_date": "2006-02-08",
+        "email": "a.kruglyshev@gmail.com",
+        "login": "AHTOXA_AHIGILATOR2006",
+        "password": "anton"
+    },
+    "darkus-_-": {
+        "first_name": "Pavel",
+        "last_name": "Krotov",
+        "birth_date": "2002-12-14",
+        "email": "krop2002@gmail.com",
+        "login": "darkus-_-",
+        "password": "pavel"
+    },
+    "polarBear1337": {
+        "first_name": "Gleb",
+        "last_name": "Velichko",
+        "birth_date": "2005-09-14",
+        "email": "g.velichko@gmail.com",
+        "login": "polarBear1337",
+        "password": "gleb"
+    },
+    "stayer_anna": {
+        "first_name": "Anna",
+        "last_name": "Kazakova",
+        "birth_date": "2004-01-22",
+        "email": "a.kazakova@gmail.com",
+        "login": "stayer_anna",
+        "password": "anna"
+    },
+    "t": {
+        "first_name": "t",
+        "last_name": "t",
+        "birth_date": "2000-01-01",
+        "email": "t",
+        "login": "t",
+        "password": "t"
+    }
+}
